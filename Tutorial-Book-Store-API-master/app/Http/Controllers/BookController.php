@@ -51,6 +51,8 @@ class BookController extends Controller
         $authors = $request->get('authors');
         $item->authors()->sync($authors);
 
+        event(new BookEvent($this->model->with('authors', 'publisher')->find($item->id)));
+
         return $this->index();
     }
 
