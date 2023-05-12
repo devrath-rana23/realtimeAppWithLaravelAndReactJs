@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\BookEvent;
 use App\Models\Book;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
